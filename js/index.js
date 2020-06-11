@@ -27,25 +27,29 @@ function mainSlide(container) {
 	var now = 0;
 	var $container = $(container).addClass("slide-wrap");
 	var $slide = $container.children("*").addClass("slide").css("transition", "0.5s");
-	var $btPrev = $('<div class="bt bt-prev"></div>').appendTo($container);
-	var $btNext = $('<div class="bt bt-next"></div>').appendTo($container);
+	var $btPrev = $('<div class="bt bt-prev"></div>').appendTo($container).click(onPrev);
+	var $btNext = $('<div class="bt bt-next"></div>').appendTo($container).click(onNext);
 	// console.log($slide);
 	var last = $slide.length - 1;
-	
-
 
 	function init() {
 		$container.children(".slide").remove();
-		$($slide[now]).appendTo('.main-wrap');
-		now = (now == 2) ? now = 0 : now + 1;
-		$($slide[now]).appendTo('.main-wrap').css({"opacity": 0, "transform": "scale(1.2)"});
+		$($slide[now]).appendTo($container);
 	}
-	function onClick() {
-		$(".banner").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
-		$(".banner").eq(1).css({"opacity": 1, "transform": "scale(1)"});
+	function ani() {
+		$($slide[now]).appendTo($container).css({"opacity": 0, "transform": "scale(1.2)"});
+		$container.children(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
+		$container.children(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
 		setTimeout(init, 500);
 	}
-	$(".main-wrap").click(onClick);
+	function onPrev() {
+		now = (now == 0) ? now = last : now - 1;
+		ani();
+	}
+	function onNext() {
+		now = (now == 2) ? now = 0 : now + 1;
+		ani();
+	}
 	init();
 }
 
