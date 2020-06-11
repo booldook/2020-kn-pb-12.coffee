@@ -9,27 +9,33 @@ function b() {
 var fnA = a();
 var fnB = b();
 console.log(fnA, fnB);
+
+var css = {"position": "absolute", "top": "50%", "transform": "translateY(-50%)", "font-size": "5rem", "z-index": 900, "color": "#fff"};
+var $btLeft = $('<i class="bt-lt fa fa-angle-left"></i>').appendTo(".main-wrap").css(css);
+var $btRight = $('<i class="bt-rt fa fa-angle-right"></i>').appendTo(".main-wrap").css(css);
+$btLeft.css("left", "2rem");
+$btRight.css("right", "2rem");
 */
 
 /******************* 전역설정 ********************/
-mainSlide();
+mainSlide(".main-wrap");
 
 
 
 /******************* 사용자 함수 ********************/
-function mainSlide() {
+function mainSlide(container) {
 	var now = 0;
-	var $slide = $(".main-wrap").find(".banner").css("transition", "0.5s").remove();
+	var $container = $(container).addClass("slide-wrap");
+	var $slide = $container.children("*").addClass("slide").css("transition", "0.5s");
+	var $btPrev = $('<div class="bt bt-prev"></div>').appendTo($container);
+	var $btNext = $('<div class="bt bt-next"></div>').appendTo($container);
 	// console.log($slide);
 	var last = $slide.length - 1;
+	
 
-	var css = {"position": "absolute", "top": "50%", "transform": "translateY(-50%)", "font-size": "5rem", "z-index": 900, "color": "#fff"};
-	var $btLeft = $('<i class="bt-lt fa fa-angle-left"></i>').appendTo(".main-wrap").css(css);
-	var $btRight = $('<i class="bt-rt fa fa-angle-right"></i>').appendTo(".main-wrap").css(css);
-	$btLeft.css("left", "2rem");
-	$btRight.css("right", "2rem");
 
 	function init() {
+		$container.children(".slide").remove();
 		$($slide[now]).appendTo('.main-wrap');
 		now = (now == 2) ? now = 0 : now + 1;
 		$($slide[now]).appendTo('.main-wrap').css({"opacity": 0, "transform": "scale(1.2)"});
