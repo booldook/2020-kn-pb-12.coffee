@@ -7,7 +7,6 @@
 
 /******************* 사용자 함수 ********************/
 
-
 /******************* 이벤트 함수 ********************/
 function onResize() {
 	this.wid = $(this).innerWidth();
@@ -16,7 +15,7 @@ function onResize() {
 
 function onScroll() {
 	this.scTop = $(this).scrollTop();
-	if(this.scTop > this.hei) {
+	if(scTop > hei) {
 		$(".header").css({"top": 0, "bottom": "auto", "position": "fixed"});
 	}
 	else {
