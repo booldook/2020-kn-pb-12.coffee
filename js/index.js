@@ -33,20 +33,26 @@ function mainSlide(container) {
 	var last = $slide.length - 1;
 
 	function init() {
+		$btPrev.show();
+		$btNext.show();
 		$container.children(".slide").remove();
 		$($slide[now]).appendTo($container);
 	}
 	function ani() {
 		$($slide[now]).appendTo($container).css({"opacity": 0, "transform": "scale(1.2)"});
-		$container.children(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
-		$container.children(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
-		setTimeout(init, 500);
+		setTimeout(function(){
+			$container.children(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
+			$container.children(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
+			setTimeout(init, 500);
+		}, 0);
 	}
 	function onPrev() {
+		$(this).hide();
 		now = (now == 0) ? now = last : now - 1;
 		ani();
 	}
 	function onNext() {
+		$(this).hide();
 		now = (now == 2) ? now = 0 : now + 1;
 		ani();
 	}
