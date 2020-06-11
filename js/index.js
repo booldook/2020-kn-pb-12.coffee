@@ -29,7 +29,6 @@ function mainSlide(container) {
 	var $slide = $container.children("*").addClass("slide").css("transition", "0.5s");
 	var $btPrev = $('<div class="bt bt-prev"></div>').appendTo($container).click(onPrev);
 	var $btNext = $('<div class="bt bt-next"></div>').appendTo($container).click(onNext);
-	// console.log($slide);
 	var last = $slide.length - 1;
 
 	function init() {
