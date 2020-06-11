@@ -1,11 +1,28 @@
 /******************* 사전지식 ********************/
+/*
+function a() {
 
+}
+function b() {
+	return "B";
+}
+var fnA = a();
+var fnB = b();
+console.log(fnA, fnB);
+*/
 
 /******************* 전역설정 ********************/
+mainSlide();
 
 
 
 /******************* 사용자 함수 ********************/
+function mainSlide() {
+	var $slide = $(".main-wrap").find(".banner").remove();
+	console.log($slide);
+}
+
+
 
 /******************* 이벤트 함수 ********************/
 function onResize() {
