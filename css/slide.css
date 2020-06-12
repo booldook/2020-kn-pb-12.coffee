@@ -1,5 +1,5 @@
 .slide-wrap {position: relative; width: 100%; overflow: hidden;}
-.slide-wrap > .slide {position: absolute; width: 100%;}
+.slide-wrap > .slide {position: absolute; width: 100%; transition: all 0.5s;}
 .slide-wrap .bt {font-size: 7rem; color: #fff; position: absolute; top: 50%; transform: translateY(-50%); z-index: 900; opacity: 0.3; cursor: pointer; transition: all 0.5s;}
 .slide-wrap .bt:hover {opacity: 0.8;}
 .slide-wrap .bt.bt-prev {left: 2rem;}

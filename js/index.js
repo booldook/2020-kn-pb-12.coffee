@@ -18,19 +18,22 @@ $btRight.css("right", "2rem");
 */
 
 /******************* 전역설정 ********************/
-mainSlide(".main-wrap", onComplete);
+mainSlide(".main-wrap", ".banner", onComplete);
 
 
 
 /******************* 사용자 함수 ********************/
-function onComplete(prev, next, container) {
-	
+function onComplete(prevSlide, nextSlide, container) {
+	$(prevSlide).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
+	$(prevSlide).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
+	$(nextSlide).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
+	$(nextSlide).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
 }
 
-function mainSlide(container, cb) {
+function mainSlide(container, slide, cb) {
 	var now = 0;
 	var $container = $(container).addClass("slide-wrap");
-	var $slide = $container.children("*").addClass("slide").css("transition", "0.5s");
+	var $slide = $(slide).addClass("slide");
 	var $btPrev = $('<div class="bt bt-prev"></div>').appendTo($container).click(onPrev);
 	var $btNext = $('<div class="bt bt-next"></div>').appendTo($container).click(onNext);
 	var last = $slide.length - 1;
@@ -44,24 +47,20 @@ function mainSlide(container, cb) {
 	function ani() {
 		$($slide[now]).appendTo($container).css({"opacity": 0, "transform": "scale(1.2)"});
 		setTimeout(function(){
-			$container.children(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
-			$container.children(".slide").eq(0).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
-			$container.children(".slide").eq(0).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
-
-			$container.children(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
-			$container.children(".slide").eq(1).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
-			$container.children(".slide").eq(1).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
+			$container.find(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
+			$container.find(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
+			cb($container.find(".slide").eq(0), $container.find(".slide").eq(1), $container);	
 			setTimeout(init, 500);
 		}, 0);
 	}
 	function onPrev() {
 		$(this).hide();
-		now = (now == 0) ? now = last : now - 1;
+		now = (now == 0) ? last : now - 1;
 		ani();
 	}
 	function onNext() {
 		$(this).hide();
-		now = (now == 2) ? now = 0 : now + 1;
+		now = (now == 2) ? 0 : now + 1;
 		ani();
 	}
 	init();

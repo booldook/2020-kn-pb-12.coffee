@@ -26,8 +26,10 @@ h1, h2, h3, h4, h5, .rc {font-family: 'Roboto Condensed', sans-serif; font-weigh
 .main-wrap > .banner2 {background-image: url(../img/c-sl-004.jpg);}
 .main-wrap > .banner3 {background-image: url(../img/c-sl-005.jpg);}
 .main-wrap .symbol {width: 20vw; margin-bottom: 1rem;}
-.main-wrap .slogan {font-size: 4vw; text-align: center; margin-bottom: 1rem; transition: all 0.5s; transform: scale(0.5); opacity: 0;}
-.main-wrap .writer {font-size: 1.5vw; color: #f7ba4a; transition: all 0.5s; transform: translateY(5vw); opacity: 0;}
+.main-wrap .slogan {font-size: 4vw; text-align: center; margin-bottom: 1rem; 
+	transition: all 0.5s; transform: scale(1); opacity: 1;}
+.main-wrap .writer {font-size: 1.5vw; color: #f7ba4a; transition: all 0.5s; 
+	transform: translateY(0); opacity: 1;}
 
 
 
