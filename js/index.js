@@ -18,12 +18,16 @@ $btRight.css("right", "2rem");
 */
 
 /******************* 전역설정 ********************/
-mainSlide(".main-wrap");
+mainSlide(".main-wrap", onComplete);
 
 
 
 /******************* 사용자 함수 ********************/
-function mainSlide(container) {
+function onComplete(prev, next, container) {
+	
+}
+
+function mainSlide(container, cb) {
 	var now = 0;
 	var $container = $(container).addClass("slide-wrap");
 	var $slide = $container.children("*").addClass("slide").css("transition", "0.5s");
@@ -41,7 +45,12 @@ function mainSlide(container) {
 		$($slide[now]).appendTo($container).css({"opacity": 0, "transform": "scale(1.2)"});
 		setTimeout(function(){
 			$container.children(".slide").eq(0).css({"opacity": 0, "transform": "scale(0.7)"});
+			$container.children(".slide").eq(0).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
+			$container.children(".slide").eq(0).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
+
 			$container.children(".slide").eq(1).css({"opacity": 1, "transform": "scale(1)"});
+			$container.children(".slide").eq(1).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
+			$container.children(".slide").eq(1).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
 			setTimeout(init, 500);
 		}, 0);
 	}

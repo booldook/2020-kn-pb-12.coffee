@@ -14,5 +14,15 @@ var Slide = (function(){
 
 
 
-var mainSlide = new Slide({type: 'scale', container: '.main-wrap'});
+var mainSlide = new Slide({
+	type: 'scale', 
+	container: '.main-wrap', 
+	slide: '.slide',
+	before: function(prev, next, container){
+
+	},
+	complete: function(prev, next, container){
+
+	}
+});
 console.log(mainSlide);
