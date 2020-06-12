@@ -21,7 +21,8 @@ $btRight.css("right", "2rem");
 //Slide.scale(".main-wrap", ".banner", onComplete);
 //Slide.scale(".main-wrap2", ".banner", onComplete);
 
-var slide = new Slide(".main-wrap", ".slide", "scale", onComplete);
+var slide = new Slide(".main-wrap", ".banner", "scale", onComplete);
+var slide = new Slide(".main-wrap2", ".banner", "scale", onComplete);
 
 
 
