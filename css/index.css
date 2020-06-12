@@ -25,6 +25,8 @@ h1, h2, h3, h4, h5, .rc {font-family: 'Roboto Condensed', sans-serif; font-weigh
 .main-wrap > .banner1 {background-image: url(../img/c-sl-000.jpg);}
 .main-wrap > .banner2 {background-image: url(../img/c-sl-004.jpg);}
 .main-wrap > .banner3 {background-image: url(../img/c-sl-005.jpg);}
+.main-wrap .symbol {width: 20vw;}
+
 
 
 /******************* 반응형 ********************/
