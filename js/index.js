@@ -18,8 +18,11 @@ $btRight.css("right", "2rem");
 */
 
 /******************* 전역설정 ********************/
-Slide.scale(".main-wrap", ".banner", onComplete);
-Slide.scale(".main-wrap2", ".banner", onComplete);
+//Slide.scale(".main-wrap", ".banner", onComplete);
+//Slide.scale(".main-wrap2", ".banner", onComplete);
+
+var slide = new Slide(".main-wrap", ".slide", "scale", onComplete);
+
 
 
 /******************* 사용자 함수 ********************/

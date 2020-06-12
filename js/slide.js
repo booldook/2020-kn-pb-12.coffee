@@ -30,9 +30,23 @@ var Slide = (function(){
 	function Slide(container, slide, type, cb) {
 		this.container = $(container);
 		this.slide = $(container).find(slide);
-		if(typeof type == "String") this.type = type;
-		else if(typeof type == "function") this.cb = type;
-		this.cb = cb;
+		if(typeof type == "string") {
+			this.type = type;
+			this.cb = cb;
+		}
+		else if(typeof type == "function") {
+			this.type = 'hori';
+			this.cb = type;
+		}
+		else {
+			this.type = 'hori';
+			this.cb = undefined;
+		}
+
+		console.log(this.container);
+		console.log(this.slide);
+		console.log(this.type);
+		console.log(this.cb);
 	}
 	return Slide;
 })();
