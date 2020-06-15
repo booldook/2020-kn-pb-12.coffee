@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .about-wrap .bt-yellow {font-size: 1.125rem;} 
 
 /******************* .loc-wrap ********************/
-.loc-wrap {position: relative; background-image: url(../img/c-sl-005.jpg); background-size: cover;}
+.loc-wrap {position: relative; background-image: url(../img/c-sl-005.jpg); background-size: cover;background-position-x: center;}
 .loc-wrap::before {display: block; width: 100%; height: 100%; content: ""; background-color: rgba(0,0,0,0.4); position: absolute;}
 .loc-wrap .title {font-size: 3rem; color: #fff; text-align: center;}
 .loc-wrap .store-wrap {display: flex; justify-content: space-between;}
@@ -66,17 +66,28 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .loc-wrap .store > .photo {background-color: #e6ac65; cursor: pointer;}
 .loc-wrap .store > .photo > img {transition: all 0.5s;}
 .loc-wrap .store > .photo:hover > img {opacity: 0.6;}
+.loc-wrap .store > .cont {line-height: 1.75; color: #999; margin: 1.25rem 0;}
+.loc-wrap .store > div:not(.photo) {color: #333; padding: 0.5rem 0;}
+.loc-wrap .store > .bt-map {margin-top: 1.5rem;}
+.loc-wrap .store i.fa {width: 2rem;}
 
 
 /******************* 반응형 ********************/
+@media screen and (max-width: 1600px) {
+	.loc-wrap {background-size: auto 120%;}
+}
+
 @media screen and (max-width: 991px) {
-	.wrapper {padding: 0 2%;}
+	.wrapper {padding: 5rem 2%;}
 	.about-wrap {display: block;}
 	.about-wrap > .photos {width: 60%; margin: 0 auto 2rem auto;}
+	.loc-wrap .store-wrap {display: block;}
+	.loc-wrap .store {width: 70%; margin: 2% auto;}
 }
 
 @media screen and (max-width: 767px) {
-	.wrapper {padding: 0 3%;}
+	.wrapper {padding: 5rem 3%;}
 	.about-wrap > .photos {display: none;}
+	.loc-wrap .store {width: 90%; margin: 2% auto;}
 }
 
