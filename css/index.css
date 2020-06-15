@@ -12,6 +12,8 @@ font-family: 'Roboto Condensed', sans-serif;
 html, body {height: 5000px; font-family: 'Roboto', sans-serif;}
 h1, h2, h3, h4, h5, .rc {font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
 .pointer {cursor: pointer;}
+.wrapper {max-width: 1200px; margin: 4rem auto; padding: 0 1%;}
+.bt-yellow {background-color: #e7b35a; color: #fff; padding: 0.75rem 1.25rem; border: none; cursor: pointer;}
 
 /******************* header ********************/
 .header {width: 100%; display: flex; justify-content: center; align-items: center; background-color: #111; color: #f8f8f8; font-size: 1.25rem; padding: 1rem; position: absolute; bottom: 0; z-index: 999;}
@@ -39,6 +41,16 @@ h1, h2, h3, h4, h5, .rc {font-family: 'Roboto Condensed', sans-serif; font-weigh
 .main-wrap .bt.bt-prev::after {content: '〈'; display: block;}
 .main-wrap .bt.bt-next::after {content: '〉'; display: block;}
 
+/******************* .about-wrap ********************/
+.about-wrap {display: flex; justify-content: space-between;}
+.about-wrap > div {flex: 48% 0 0;}
+.about-wrap .photos {display: flex; justify-content: space-between;}
+.about-wrap .photos > div {flex: 48% 0 0;}
+.about-wrap .photos > .photo-lt {display: flex; flex-direction: column; justify-content: space-between;}
+.about-wrap .conts {display: flex; flex-direction: column; justify-content: center; text-align: center;}
+.about-wrap .title {color: #222; margin-bottom: 1.5rem;}
+.about-wrap .cont {color: #999; line-height: 1.75rem; margin-bottom: 1.5rem;}
+.about-wrap 
 
 
 /******************* 반응형 ********************/
