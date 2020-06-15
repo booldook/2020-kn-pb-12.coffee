@@ -43,6 +43,8 @@ var mainTitles = [
 	"What goes best with a cup of coffee?<br>Another cup!"
 ];
 var mainWriters = ["Rian Aditia", "Turkish Proverb", "Henry Rollins"];
+$(".main-wrap").find(".slogan").html(mainTitles[mainNow]);
+$(".main-wrap").find(".writer > span").html(mainWriters[mainNow]);
 mainInit();
 
 function mainInit() {
@@ -55,10 +57,20 @@ function mainAni() {
 	// 1. 바뀐 mainNow번째 그림을 scale(1.3), opacity: 0 인 상태로 화면에 붙일것
 	// 2. 붙인 그림을 animation시킬것(css값 변경)
 	// 3. 애니메이션이 완료되면 mainInit()을 실행하여 원상태로 만들것
+	// 4. 글씨들이 사라지는 애니메이션이 되고, 사라지자마자 내용을 바꿔서 나타나는 애니메이션이 된다.
 	var slide = $(mainSlide[mainNow]).appendTo(".main-wrap").css({"transform": "scale(1.3)", "opacity": 0});
 	setTimeout(function(){
 		slide.css({"transform": "scale(1)", "opacity": 1});
 	}, 0);
+	setTimeout(mainInit, 500);
+	$(".main-wrap").find(".slogan").css({"transform": "scale(0.8)", "opacity": 0});
+	$(".main-wrap").find(".writer").css({"transform": "translateY(50px)", "opacity": 0});
+	setTimeout(function(){
+		$(".main-wrap").find(".slogan").html(mainTitles[mainNow]);
+		$(".main-wrap").find(".writer > span").html(mainWriters[mainNow]);
+		$(".main-wrap").find(".slogan").css({"transform": "scale(1)", "opacity": 1});
+		$(".main-wrap").find(".writer").css({"transform": "translateY(0)", "opacity": 1});
+	}, 1000);
 }
 
 function onMainPrev() {
