@@ -37,23 +37,37 @@ function onComplete(prevSlide, nextSlide, container) {
 var mainNow = 0;
 var mainSlide = $(".main-wrap > .banner");
 var mainLast = mainSlide.length - 1;
+var mainTitles = [
+	"There's nothing sweeter<br>than a cup of bitter coffee.",
+	"Coffee should be black as hell,<br>strong as death and sweet as love.",
+	"What goes best with a cup of coffee?<br>Another cup!"
+];
+var mainWriters = ["Rian Aditia", "Turkish Proverb", "Henry Rollins"];
 mainInit();
 
 function mainInit() {
+	// 1. 화면의 모든 슬라이드(.banner)를 지운다.
+	// 2. 현재 나타나야 되는 슬라이드(.banner.eq(mainNow))를 붙인다.
 	$(".main-wrap > .banner").remove();
-	$(".main-wrap").append(mainSlide[mainNow]);
+	$(mainSlide[mainNow]).appendTo(".main-wrap");
 }
 function mainAni() {
 	// 1. 바뀐 mainNow번째 그림을 scale(1.3), opacity: 0 인 상태로 화면에 붙일것
 	// 2. 붙인 그림을 animation시킬것(css값 변경)
 	// 3. 애니메이션이 완료되면 mainInit()을 실행하여 원상태로 만들것
+	var slide = $(mainSlide[mainNow]).appendTo(".main-wrap").css({"transform": "scale(1.3)", "opacity": 0});
+	setTimeout(function(){
+		slide.css({"transform": "scale(1)", "opacity": 1});
+	}, 0);
 }
 
 function onMainPrev() {
+	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
 	mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
 	mainAni();
 }
 function onMainNext() {
+	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
 	mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
 	mainAni();
 }
