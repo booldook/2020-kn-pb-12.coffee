@@ -21,17 +21,24 @@ $btRight.css("right", "2rem");
 //Slide.scale(".main-wrap", ".banner", onComplete);
 //Slide.scale(".main-wrap2", ".banner", onComplete);
 
+
+/******************* 슬라이드 객체형 ********************/
+/*
 var slide = new Slide(".main-wrap", ".banner", "scale", onComplete);
-
-
-
-/******************* 사용자 함수 ********************/
 function onComplete(prevSlide, nextSlide, container) {
 	$(prevSlide).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
 	$(prevSlide).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
 	$(nextSlide).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
 	$(nextSlide).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
 }
+*/
+
+/******************* 슬라이드  ********************/
+
+
+
+
+/******************* 사용자 함수 ********************/
 
 
 
