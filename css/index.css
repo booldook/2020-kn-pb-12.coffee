@@ -49,8 +49,18 @@ h1, h2, h3, h4, h5, .rc {font-family: 'Roboto Condensed', sans-serif; font-weigh
 .about-wrap .photos > .photo-lt {display: flex; flex-direction: column; justify-content: space-between;}
 .about-wrap .conts {display: flex; flex-direction: column; justify-content: center; text-align: center;}
 .about-wrap .title {color: #222; margin-bottom: 1.5rem;}
-.about-wrap .cont {color: #999; line-height: 1.75rem; margin-bottom: 1.5rem;}
-.about-wrap 
+.about-wrap .cont {color: #999; line-height: 1.75rem; margin-bottom: 1.5rem;} 
 
 
 /******************* 반응형 ********************/
+@media screen and (max-width: 991px) {
+	.wrapper {padding: 0 2%;}
+	.about-wrap {display: block;}
+	.about-wrap > .photos {width: 60%; margin: 0 auto 2rem auto;}
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper {padding: 0 3%;}
+	.about-wrap > .photos {display: none;}
+}
+
