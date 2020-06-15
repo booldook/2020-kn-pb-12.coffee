@@ -113,9 +113,9 @@ function onScroll() {
 	var locHei = $(".loc-wrap").innerHeight();
 	var locEnd = locStart + locHei + hei;
 	var locGap = 0;
+	var speed = 400;
 	if(scTop + hei > locStart && scTop + hei < locEnd) {
-		locGap = 250 - Math.round((scTop + hei - locStart) / (locEnd - locStart) * 300);
-		console.log(locGap);
+		locGap = (speed/2) - Math.round((scTop + hei - locStart) / (locEnd - locStart) * speed);
 		$(".loc-wrap").css("background-position-y", locGap + "%");
 	}
 }
