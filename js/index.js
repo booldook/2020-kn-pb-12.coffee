@@ -33,8 +33,32 @@ function onComplete(prevSlide, nextSlide, container) {
 }
 */
 
-/******************* 슬라이드  ********************/
+/******************* 슬라이드 직접코딩 ********************/
+var mainNow = 0;
+var mainSlide = $(".main-wrap > .banner");
+var mainLast = mainSlide.length - 1;
+mainInit();
 
+function mainInit() {
+	$(".main-wrap > .banner").remove();
+	$(".main-wrap").append(mainSlide[mainNow]);
+}
+function mainAni() {
+	// 1. 바뀐 mainNow번째 그림을 scale(1.3), opacity: 0 인 상태로 화면에 붙일것
+	// 2. 붙인 그림을 animation시킬것(css값 변경)
+	// 3. 애니메이션이 완료되면 mainInit()을 실행하여 원상태로 만들것
+}
+
+function onMainPrev() {
+	mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
+	mainAni();
+}
+function onMainNext() {
+	mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
+	mainAni();
+}
+$(".main-wrap > .bt-prev").click(onMainPrev);
+$(".main-wrap > .bt-next").click(onMainNext);
 
 
 
