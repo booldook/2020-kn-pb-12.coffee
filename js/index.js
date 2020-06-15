@@ -99,12 +99,24 @@ function onResize() {
 }
 
 function onScroll() {
+	// header 위치
 	this.scTop = $(this).scrollTop();
 	if(scTop > hei) {
 		$(".header").css({"top": 0, "bottom": "auto", "position": "fixed"});
 	}
 	else {
 		$(".header").css({"top": "auto", "bottom": 0, "position": "absolute"});
+	}
+
+	// .loc-wrap의 background-position-y 변화
+	var locStart = $(".loc-wrap").offset().top;
+	var locHei = $(".loc-wrap").innerHeight();
+	var locEnd = locStart + locHei + hei;
+	var locGap = 0;
+	if(scTop + hei > locStart && scTop + hei < locEnd) {
+		locGap = 250 - Math.round((scTop + hei - locStart) / (locEnd - locStart) * 300);
+		console.log(locGap);
+		$(".loc-wrap").css("background-position-y", locGap + "%");
 	}
 }
 
