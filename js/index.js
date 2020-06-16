@@ -88,11 +88,11 @@ $(".main-wrap > .bt-next").click(onMainNext);
 
 
 /******************* 슬라이드 직접코딩2 ********************/
-var prdNow = 0;
-var prdLast = 0;
-var prds = [];
-var prdArr = [];
-var prdSize = 6;
+var prdNow = 0,  prdSize = 6, prdLast, prdWid, prdLeft;
+var prds = [], prdArr = [];
+$(".prd-wrapper > .bt-left").click(onPrdLeft);
+$(".prd-wrapper > .bt-right").click(onPrdRight);
+
 $.get("../json/prds.json", onPrdLoad);
 function onPrdLoad(r) {
 	prdLast = r.prds.length - 1;
@@ -114,6 +114,27 @@ function prdInit() {
 	prdArr[0] = (prdNow == 0) ? prdLast : prdNow - 1;
 	for(var i=2; i<prdSize; i++) prdArr[i] = (prdArr[i-1] == prdLast) ? 0 : prdArr[i-1] + 1;
 	for(var i=0; i<prdArr.length; i++) $(prds[prdArr[i]]).appendTo(".prd-wrap");
+}
+
+function onPrdLeft() {
+	prdWid = $(".prd-wrap > .prd").innerWidth();
+	prdLeft = 0;
+	prdNow = (prdNow == 0) ? prdLast : prdNow - 1;
+	prdAni();
+}
+
+function onPrdRight() {
+	prdWid = $(".prd-wrap > .prd").innerWidth();
+	prdLeft = -prdWid * 2 + "px";
+	prdNow = (prdNow == prdLast) ? 0 : prdNow + 1;
+	prdAni();
+}
+
+function prdAni() {
+	$(".prd-wrap").stop().animate({"left": prdLeft}, 500, function(){
+		$(this).empty().css({"left": -prdWid+"px"});
+		prdInit();
+	});
 }
 
 
