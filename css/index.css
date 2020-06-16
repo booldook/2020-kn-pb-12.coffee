@@ -71,6 +71,18 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .loc-wrap .store > .bt-map {margin-top: 1.5rem;}
 .loc-wrap .store i.fa {width: 2rem;}
 
+/******************* .special-wrap ********************/
+.special-wrap .title {font-size: 3rem; color: #333; text-align: center;}
+.prd-stage {width: 100%; border: 1px solid blue;}
+.prd-stage .prd-wrap {width: 150%; position: relative; left: -25%; display: flex; border: 1px solid red;}
+.prd-stage .prd {flex: 16.67% 1 1; padding: 1em; font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; font-weight: bold; text-align: center;}
+.prd-stage .prd-img {border-radius: 50%; overflow: hidden; background-color: #e7b35a; cursor: pointer;}
+.prd-stage .prd-img img {transition: all 0.5s;}
+.prd-stage .prd-img:hover img {opacity: 0.6;}
+.prd-stage .prd-title {font-size: 1.5em; color: #333; padding: 0.75em 0 0.25em 0;}
+.prd-stage .prd-price {font-size: 1.25em; color: #e7b35a;}
+
+
 
 /******************* 반응형 ********************/
 @media screen and (max-width: 1600px) {
