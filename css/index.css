@@ -77,8 +77,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .prd-wrapper .bt {color: #e7b35a; font-size: 2.5em; cursor: pointer; position: absolute; z-index: 800; top: 50%; transform: translateY(-50%); transition: all 0.5s;}
 .prd-wrapper .bt.bt-left {left: -0.75em;}
 .prd-wrapper .bt.bt-right {right: -0.75em;}
-.prd-stage {width: 100%; position: relative; /* overflow: hidden; */ border: 1px solid blue;}
-.prd-stage .prd-wrap {width: 150%; position: relative; left: -25%; display: flex; border: 1px solid red;}
+.prd-stage {width: 100%; position: relative; overflow: hidden;}
+.prd-stage .prd-wrap {width: 150%; position: relative; left: -25%; display: flex;}
 .prd-stage .prd {flex: 16.6667% 0 0; padding: 1em; font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; font-weight: bold; text-align: center;}
 .prd-stage .prd-img {border-radius: 50%; overflow: hidden; background-color: #e7b35a; cursor: pointer;}
 .prd-stage .prd-img img {transition: all 0.5s;}
@@ -118,3 +118,16 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.prd-stage .prd {flex: 33.3333% 0 0;}
 }
 
+/*
+150% -25%
+16.6667%
+
+166.6666% -33.3333%
+20%
+
+200% -50%
+25%
+
+300% -100%
+33.3333%
+*/
