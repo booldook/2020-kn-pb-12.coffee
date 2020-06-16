@@ -77,9 +77,9 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .prd-wrapper .bt {color: #e7b35a; font-size: 2.5em; cursor: pointer; position: absolute; z-index: 800; top: 50%; transform: translateY(-50%); transition: all 0.5s;}
 .prd-wrapper .bt.bt-left {left: -0.75em;}
 .prd-wrapper .bt.bt-right {right: -0.75em;}
-.prd-stage {width: 100%; position: relative; overflow: hidden;}
-.prd-stage .prd-wrap {width: 150%; position: relative; left: -25%; display: flex;}
-.prd-stage .prd {flex: 16.67% 1 1; padding: 1em; font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; font-weight: bold; text-align: center;}
+.prd-stage {width: 100%; position: relative; /* overflow: hidden; */ border: 1px solid blue;}
+.prd-stage .prd-wrap {width: 150%; position: relative; left: -25%; display: flex; border: 1px solid red;}
+.prd-stage .prd {flex: 16.6667% 0 0; padding: 1em; font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; font-weight: bold; text-align: center;}
 .prd-stage .prd-img {border-radius: 50%; overflow: hidden; background-color: #e7b35a; cursor: pointer;}
 .prd-stage .prd-img img {transition: all 0.5s;}
 .prd-stage .prd-img:hover img {opacity: 0.6;}
@@ -93,16 +93,28 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 }
 
 @media screen and (max-width: 991px) {
+	/* 768 ~ 991 */
 	.wrapper {padding: 5rem 2%;}
 	.about-wrap {display: block;}
 	.about-wrap > .photos {width: 60%; margin: 0 auto 2rem auto;}
 	.loc-wrap .store-wrap {display: block;}
 	.loc-wrap .store {width: 70%; margin: 2% auto;}
+	.prd-stage .prd-wrap {width: 166.6666%; left: -33.3333%;}
+	.prd-stage .prd {flex: 20% 0 0;}
 }
 
 @media screen and (max-width: 767px) {
+	/* 480 ~ 767 */
 	.wrapper {padding: 5rem 3%;}
 	.about-wrap > .photos {display: none;}
 	.loc-wrap .store {width: 90%; margin: 2% auto;}
+	.prd-stage .prd-wrap {width: 200%; left: -50%;}
+	.prd-stage .prd {flex: 25% 0 0;}
+}
+
+@media screen and (max-width: 479px) {
+	/* 0 ~ 479 */
+	.prd-stage .prd-wrap {width: 300%; left: -100%;}
+	.prd-stage .prd {flex: 33.3333% 0 0;}
 }
 

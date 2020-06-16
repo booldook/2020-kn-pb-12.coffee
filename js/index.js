@@ -88,7 +88,7 @@ $(".main-wrap > .bt-next").click(onMainNext);
 
 
 /******************* 슬라이드 직접코딩2 ********************/
-var prdNow = 0,  prdSize = 6, prdLast, prdWid, prdLeft;
+var prdNow = 0,  prdSize = 6, prdLast, prdWid, prdLeft, prdNext;
 var prds = [], prdArr = [];
 $(".prd-wrapper > .bt-left").click(onPrdLeft);
 $(".prd-wrapper > .bt-right").click(onPrdRight);
@@ -113,7 +113,7 @@ function prdInit() {
 	prdArr[1] = prdNow;
 	prdArr[0] = (prdNow == 0) ? prdLast : prdNow - 1;
 	for(var i=2; i<prdSize; i++) prdArr[i] = (prdArr[i-1] == prdLast) ? 0 : prdArr[i-1] + 1;
-	for(var i=0; i<prdArr.length; i++) $(prds[prdArr[i]]).appendTo(".prd-wrap");
+	for(var i=0; i<prdArr.length; i++) $(prds[prdArr[i]]).clone().appendTo(".prd-wrap");
 }
 
 function onPrdLeft() {
@@ -146,6 +146,27 @@ function prdAni() {
 function onResize() {
 	this.wid = $(this).innerWidth();
 	this.hei = $(this).innerHeight();
+	if(wid > 991) { // PC
+		prdSize = 6;
+		prdWid = '16.6667%';
+		prdNext = '-33.34%';
+	}
+	else if(wid > 767) { // max-width: 991px
+		prdSize = 5;
+		prdWid = '20%';
+		prdNext = '-40%';
+	}
+	else if(wid > 479) { // max-width: 767px
+		prdSize = 4;
+		prdWid = '25%';
+		prdNext = '-50%';	
+	}
+	else if(wid <= 479) {
+		// max-width: 479px
+		prdSize = 3;
+		prdWid = '33.3333%';
+		prdNext = '-66.6666%';
+	}
 }
 
 function onScroll() {
