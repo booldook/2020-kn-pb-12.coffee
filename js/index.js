@@ -87,6 +87,28 @@ $(".main-wrap > .bt-prev").click(onMainPrev);
 $(".main-wrap > .bt-next").click(onMainNext);
 
 
+/******************* 슬라이드 직접코딩2 ********************/
+var prdNow = 0;
+var prdLast = 0;
+var prds = [];
+$.get("../json/prds.json", onPrdLoad);
+function onPrdLoad(r) {
+	var html = '';
+	for(var i in r.prds) {
+		html  = '<li class="prd">';
+		html += '	<div class="prd-img"><img src="'+r.prds[i].src+'" class="img"></div>';
+		html += '	<div class="prd-title">'+r.prds[i].title+'</div>';
+		html += '	<div class="prd-price">'+r.prds[i].price+'</div>';
+		html += '</li>';
+		prds.push($(html));		
+	}
+	prdInit();
+}
+
+function prdInit() {
+	
+}
+
 
 /******************* 사용자 함수 ********************/
 
