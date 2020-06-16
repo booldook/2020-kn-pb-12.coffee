@@ -4,7 +4,7 @@
 		{"id": 2, "title": "Caramel Cappuccino", "src": "../img/c-sl-021-800x800.jpg", "price":"$1.99", "link": "#"},
 		{"id": 3, "title": "Classic Cheesecake", "src": "../img/c-sl-016-800x800.jpg", "price":"$3.00", "link": "#"},
 		{"id": 4, "title": "Chocolate Cake", "src": "../img/c-sl-014-800x800.jpg", "price":"$3.50", "link": "#"},
-		{"id": 5, "title": "Classic Flat White", "src": "../img/c-sl-021-800x800.jpg", "price":"$1.99", "link": "#"},
+		{"id": 5, "title": "Classic Flat White", "src": "../img/c-sl-018-800x800.jpg", "price":"$1.99", "link": "#"},
 		{"id": 6, "title": "Hot Chocolate", "src": "../img/c-sl-0125-800x800.jpg", "price":"$1.99", "link": "#"},
 		{"id": 7, "title": "Honey Pancake", "src": "../img/c-sl-0129-800x800.jpg", "price":"$3.99", "link": "#"}
 	]

@@ -91,8 +91,11 @@ $(".main-wrap > .bt-next").click(onMainNext);
 var prdNow = 0;
 var prdLast = 0;
 var prds = [];
+var prdArr = [];
+var prdSize = 6;
 $.get("../json/prds.json", onPrdLoad);
 function onPrdLoad(r) {
+	prdLast = r.prds.length - 1;
 	var html = '';
 	for(var i in r.prds) {
 		html  = '<li class="prd">';
@@ -106,7 +109,11 @@ function onPrdLoad(r) {
 }
 
 function prdInit() {
-	
+	prdArr = [];
+	prdArr[1] = prdNow;
+	prdArr[0] = (prdNow == 0) ? prdLast : prdNow - 1;
+	for(var i=2; i<prdSize; i++) prdArr[i] = (prdArr[i-1] == prdLast) ? 0 : prdArr[i-1] + 1;
+	for(var i=0; i<prdArr.length; i++) $(prds[prdArr[i]]).appendTo(".prd-wrap");
 }
 
 
