@@ -159,6 +159,16 @@ function onLocationLoad(r) {
 		html += '</li>';
 		$(".store-wrap").append(html);
 	}
+	$(".store-wrap").find(".bt-map").click(onMapOpen);
+	$(".modal-map").find(".bt-close").click(onMapClose);
+}
+
+function onMapOpen() {
+
+}
+
+function onMapClose() {
+	
 }
 
 /******************* Menu 동적 생성 ********************/
