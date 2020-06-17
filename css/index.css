@@ -88,10 +88,14 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 
 /******************* .menu-wrap ********************/
 .menu-wrap .title {font-size: 3rem; color: #333; text-align: center;}
-.menu-wrap .wrapper {border: 1px solid red;}
 .menu-wrap .menus {display: flex; flex-wrap: wrap; width: 102%; margin-left: -1%;}
 .menu-wrap .menu {flex: 31.3333% 0 0; margin: 0 1%; padding: 1.5rem 0; border-bottom: 1px dashed #999;}
-.menu-wrap .menu-img {width: 80px; border-radius: 50%; overflow: hidden; float: left; margin-right: 20px;}
+.menu-wrap .menu-img {width: 80px; border-radius: 50%; overflow: hidden; float: left; margin-right: 20px; background-color: #e7b35a; cursor: pointer;}
+.menu-wrap .menu-img > img {transition: all 0.5s;}
+.menu-wrap .menu-img:hover > img {opacity: 0.6;}
+.menu-wrap .menu-title {padding-top: 1rem;}
+.menu-wrap .menu-price {color: #e7b35a;}
+
 
 
 /******************* 반응형 ********************/
@@ -108,6 +112,10 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.loc-wrap .store {width: 70%; margin: 2% auto;}
 	.prd-stage .prd-wrap {width: 166.6666%; left: -33.3333%;}
 	.prd-stage .prd {flex: 20% 0 0;}
+	.menu-wrap .menus {width: 100%; margin-left: 0;}
+	.menu-wrap .menu {flex: 100% 0 0; margin: 0;}
+	.menu-wrap .menu-img {width: 200px;}
+	.menu-wrap .menu-title {padding-top: 5rem;}
 }
 
 @media screen and (max-width: 767px) {

@@ -142,8 +142,8 @@ function onMenuLoad(r) {
 	for(var i in r.menus) {
 		html  = '<li class="menu clear">';
 		html += '<div class="menu-img"><img src="'+r.menus[i].src+'" class="img"></div>';
-		html += '<h3 class="menu-title">'+r.menus[i].title+'</h3>';
-		html += '<div class="menu-price">'+r.menus[i].price+'</div>';
+		html += '<h3 class="menu-title rc">'+r.menus[i].title+'</h3>';
+		html += '<div class="menu-price rc">'+r.menus[i].price+'</div>';
 		html += '</li>';
 		$(".menus").append(html);
 	}
