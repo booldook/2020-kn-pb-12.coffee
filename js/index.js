@@ -135,6 +135,32 @@ function prdAni() {
 	});
 }
 
+/******************* Location 동적 생성 ********************/
+$.get("../json/locations.json", onLocationLoad);
+function onLocationLoad(r) {
+	var html = '';
+	for(var i in r.locs) {
+		html  = '<li class="store">';
+		html += '<div class="photo"><img src="'+r.locs[i].src+'" class="img"></div>';
+		html += '<p class="cont">'+r.locs[i].cont+'</p>';
+		html += '<div class="addr">';
+		html += '<i class="fa fa-map-marker-alt"></i>';
+		html += '<span class="rc">Address: '+r.locs[i].addr+'</span>';
+		html += '</div>';
+		html += '<div class="time">';
+		html += '<i class="fa fa-clock"></i>';
+		html += '<span class="rc">Open: '+r.locs[i].time+'</span>';
+		html += '</div>';
+		html += '<div class="tel">';
+		html += '<i class="fa fa-phone"></i>';
+		html += '<span class="rc">Phone: '+r.locs[i].tel+'</span>';
+		html += '</div>';
+		html += '<button class="bt-map bt-yellow">See on Map</button>';
+		html += '</li>';
+		$(".store-wrap").append(html);
+	}
+}
+
 /******************* Menu 동적 생성 ********************/
 $.get("../json/menus.json", onMenuLoad);
 function onMenuLoad(r) {
