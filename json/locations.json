@@ -1,7 +1,7 @@
 {
 	"locs": [
-		{"src": "../img/c-sl-012-1024x663.jpg", "cont": "Morbi vel nisi condimentum, efficitur orci at, vehicula velit. Maecenas ut euismod diam. Integer aliquet turpis eunis!", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "map": ""},
-		{"src": "../img/c-sl-011-1024x663.jpg", "cont": "Integer iaculis justo lacus, consectetur semper massa consectetur at. Integer vitae est eget elit venenatis efficitur at sit amet ex pulvinar enim commodo semper.", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "map": ""},
-		{"src": "../img/c-sl-010-1024x663.jpg", "cont": "Quisque porta felis turpis, et pulvinar enim commodo semper. Vivamus massa elit, sollicitudin non placerat ac, blandit eu risus. Curabitur fermentum lobortis arcu.", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "map": ""}
+		{"src": "../img/c-sl-012-1024x663.jpg", "cont": "Morbi vel nisi condimentum, efficitur orci at, vehicula velit. Maecenas ut euismod diam. Integer aliquet turpis eunis!", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "lat": "37.498744", "lon": "127.026720"},
+		{"src": "../img/c-sl-011-1024x663.jpg", "cont": "Integer iaculis justo lacus, consectetur semper massa consectetur at. Integer vitae est eget elit venenatis efficitur at sit amet ex pulvinar enim commodo semper.", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "lat": "37.554518", "lon": "126.936602"},
+		{"src": "../img/c-sl-010-1024x663.jpg", "cont": "Quisque porta felis turpis, et pulvinar enim commodo semper. Vivamus massa elit, sollicitudin non placerat ac, blandit eu risus. Curabitur fermentum lobortis arcu.", "addr": "421, Brooklyn, New York", "time": "9 AM / 22 PM", "tel": "+1 354 454878", "lat": "37.572229", "lon": "126.987115"}
 	]
 }
