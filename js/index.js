@@ -181,8 +181,11 @@ function onMapOpen() {
 	var lat = $(this).data("lat");
 	var lon = $(this).data("lon");
 	var container = document.getElementById('map');
-	var options = {center: new kakao.maps.LatLng(lat, lon), level: 3};
+	var options = {center: new kakao.maps.LatLng(lat, lon), level: 2};
 	var map = new kakao.maps.Map(container, options);
+	var markerPosition  = new kakao.maps.LatLng(lat, lon); 
+	var marker = new kakao.maps.Marker({ position: markerPosition });
+	marker.setMap(map);
 }
 
 function onMapClose() {
