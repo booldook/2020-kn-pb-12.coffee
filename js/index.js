@@ -155,7 +155,7 @@ function onLocationLoad(r) {
 		html += '<i class="fa fa-phone"></i>';
 		html += '<span class="rc">Phone: '+r.locs[i].tel+'</span>';
 		html += '</div>';
-		html += '<button class="bt-map bt-yellow">See on Map</button>';
+		html += '<button data-lat="'+r.locs[i].lat+'" data-lon="'+r.locs[i].lon+'" class="bt-map bt-yellow">See on Map</button>';
 		html += '</li>';
 		$(".store-wrap").append(html);
 	}
@@ -178,8 +178,10 @@ function onModalWrap(e) {
 
 function onMapOpen() {
 	$(".modal-map").css({"display": "flex", "opacity": 0}).stop().animate({"opacity": 1}, 500);
+	var lat = $(this).data("lat");
+	var lon = $(this).data("lon");
 	var container = document.getElementById('map');
-	var options = { center: new kakao.maps.LatLng(33.450701, 126.570667), level: 3};
+	var options = {center: new kakao.maps.LatLng(lat, lon), level: 3};
 	var map = new kakao.maps.Map(container, options);
 }
 
