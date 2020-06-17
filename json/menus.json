@@ -1,0 +1,16 @@
+{
+	"menus": [
+		{"id": 1, "src":"../img/c-sl-0126-800x800.jpg", "title": "Double Espresso", "price": "$1.50"},
+		{"id": 2, "src":"../img/c-sl-018-800x800.jpg", "title": "Classic Flat White", "price": "$2.50"},
+		{"id": 3, "src":"../img/c-sl-0131-800x800.jpg", "title": "Hot Chocolate", "price": "$2.99"},
+		{"id": 4, "src":"../img/c-sl-000-800x800.jpg", "title": "Coffee with Milk", "price": "$1.99"},
+		{"id": 5, "src":"../img/c-sl-021-800x800.jpg", "title": "Pour Over Coffee", "price": "$4.50"},
+		{"id": 6, "src":"../img/c-sl-0125-800x800.jpg", "title": "Cappuccino", "price": "$3.99"},
+		{"id": 7, "src":"../img/c-sl-016-800x800.jpg", "title": "Classic Cheesecake", "price": "$4.50"},
+		{"id": 8, "src":"../img/c-sl-014-800x800.jpg", "title": "Chocolate Cake", "price": "$3.99"},
+		{"id": 9, "src":"../img/c-sl-0129-800x800.jpg", "title": "Vegan Cheesecake", "price": "$2.50"},
+		{"id": 10, "src":"../img/c-sl-0130-800x800.jpg", "title": "American Pancakes", "price": "$4.50"},
+		{"id": 11, "src":"../img/c-sl-013-800x800.jpg", "title": "Apple Pie", "price": "$2.99"},
+		{"id": 12, "src":"../img/c-sl-0127-800x800.jpg", "title": "Chocolate Ice Сream", "price": "$2.99"}
+	]
+}
