@@ -161,14 +161,29 @@ function onLocationLoad(r) {
 	}
 	$(".store-wrap").find(".bt-map").click(onMapOpen);
 	$(".modal-map").find(".bt-close").click(onMapClose);
+	$(".modal-map").click(onMapClose);
+	$(".modal-map .modal-wrap").click(onModalWrap);
+	$(".modal-map").on("mousewheel", onModalWheel);
+	$(".modal-map").on("DOMMouseScroll", onModalWheel);
+}
+
+function onModalWheel(e) {
+	e.stopPropagation();
+	e.preventDefault();
+}
+
+function onModalWrap(e) {
+	e.stopPropagation();
 }
 
 function onMapOpen() {
-
+	$(".modal-map").css({"display": "flex", "opacity": 0}).stop().animate({"opacity": 1}, 500);
 }
 
 function onMapClose() {
-	
+	$(".modal-map").stop().animate({"opacity": 0}, 500, function(){
+		$(this).css("display", "none");
+	});
 }
 
 /******************* Menu 동적 생성 ********************/

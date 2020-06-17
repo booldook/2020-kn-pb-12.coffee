@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이벤트 전파에 대해 알아보자</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<style>
+		.wrap {width: 600px; height: 600px; background-color: red;}
+		.box-wrap {width: 400px; height: 400px; background-color: blue;}
+		.box {width: 200px; height: 200px; background-color: green;}
+	</style>
+	<script src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box-wrap">
+			<div class="box"></div>
+			<a href="https://naver.com">네이버</a>
+		</div>
+	</div>
+	<script>
+		$(".wrap").click(onWrap);
+		$(".box-wrap").click(onBoxWrap);
+		$(".box").click(onBox);
+		$(".wrap a").click(function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		});
+		function onWrap(e) {
+			console.log("WRAP");
+		}
+		function onBoxWrap(e) {
+			console.log("BOX_WRAP");
+		}
+		function onBox(e) {
+			e.stopPropagation();
+			console.log("BOX");
+		}
+	</script>
+</body>
+</html>
