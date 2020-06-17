@@ -20,6 +20,7 @@ $btRight.css("right", "2rem");
 /******************* 전역설정 ********************/
 //Slide.scale(".main-wrap", ".banner", onComplete);
 //Slide.scale(".main-wrap2", ".banner", onComplete);
+var KAKAO_KEY = '32029a7749fd11da301a43a23f4cf61b';
 
 
 /******************* 슬라이드 객체형 ********************/
@@ -32,7 +33,6 @@ function onComplete(prevSlide, nextSlide, container) {
 	$(nextSlide).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
 }
 */
-
 /******************* 슬라이드 직접코딩 ********************/
 var mainNow = 0;
 var mainSlide = $(".main-wrap > .banner");
@@ -178,6 +178,9 @@ function onModalWrap(e) {
 
 function onMapOpen() {
 	$(".modal-map").css({"display": "flex", "opacity": 0}).stop().animate({"opacity": 1}, 500);
+	var container = document.getElementById('map');
+	var options = { center: new kakao.maps.LatLng(33.450701, 126.570667), level: 3};
+	var map = new kakao.maps.Map(container, options);
 }
 
 function onMapClose() {
