@@ -140,7 +140,7 @@ $.get("../json/menus.json", onMenuLoad);
 function onMenuLoad(r) {
 	var html = '';
 	for(var i in r.menus) {
-		html  = '<li class="menu">';
+		html  = '<li class="menu clear">';
 		html += '<div class="menu-img"><img src="'+r.menus[i].src+'" class="img"></div>';
 		html += '<h3 class="menu-title">'+r.menus[i].title+'</h3>';
 		html += '<div class="menu-price">'+r.menus[i].price+'</div>';
