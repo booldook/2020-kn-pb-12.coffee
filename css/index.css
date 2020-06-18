@@ -105,20 +105,22 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .notice-wrap .bt.bt-right {right: -0.75em;}
 .notice-wrap .news-stage {width: 100%; position: relative; /*  overflow: hidden; */ border: 1px solid red;}
 .notice-wrap .news-wrap {width: 166.6666%; position: relative; left: -33.3333%; display: flex;}
-.notice-wrap .news {flex: 18% 0 0; margin: 0 1%; padding: 1.5em; font-family: 'Roboto Condensed', sans-serif; font-size: 1rem; font-weight: bold; text-align: center; background-color: #eee; text-align: left;}
+.notice-wrap .news {flex: 18% 0 0; margin: 0 1%; padding: 1.5em; font-size: 1rem; background-color: #eee;}
 .notice-wrap .news-img {position: relative;}
 .notice-wrap .badge-tag {position: absolute; top: 1em; left: 1em; color: #fff; font-size: 0.75em; display: flex; flex-direction: column; align-items: flex-start;}
 .notice-wrap .badge-tag .badge {padding: 0.325em 0.5em; background-color: rgba(0,0,0,0.6); margin-bottom: 0.5em;}
 .notice-wrap .badge-date {width: 65px; height: 65px; position: absolute; top: 1em; right: 1em; background-color: #fff; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .notice-wrap .badge-date .month {border-bottom: 3px solid #e7b35a; font-weight: lighter; font-size: 0.875em;}
 .notice-wrap .badge-date .day {font-size: 1.5em;}
-.notice-wrap .news-title {margin-top: 0.75em; font-size: 1.75em; color: #333; line-height: 1.5;}
+.notice-wrap .news-title {margin-top: 0.75em; font-size: 1.75em; color: #333; line-height: 1.5; font-family: 'Roboto Condensed', sans-serif; font-weight: bold; cursor: pointer; transition: all 0.5s;}
+.notice-wrap .news-title:hover {color: #e6ac65;}
 .notice-wrap .news-tag {color: #888; font-size: 0.75em; font-weight: lighter; padding: 1em 0; line-height: 1.5;}
 .notice-wrap .news-tag .tag:not(:last-child)::after {content: ""; display: inline-block; margin: 0 8px 2px 8px; width: 4px; height: 4px; background-color: #888; border-radius: 2px;}
 .notice-wrap .news-cont {font-size: 1em; line-height: 1.75; color: #666; margin: 0.5em 0;}
-.notice-wrap button {border: none; outline: none; margin-top: 1em; cursor: pointer;}
+.notice-wrap button {border: none; outline: none; margin-top: 1em; cursor: pointer; padding: 0.5em 0;}
+.notice-wrap button > span {font-size: 0.5em;}
 .notice-wrap button::after {display: block; content: ""; height: 3px; background-color: #e6ac65; transform: translateY(8px); width: 0; transition: all 0.5s;}
-.notice-wrap button:hover::after {width: 90%;}
+.notice-wrap button:hover::after {width: 100%;}
 
 
 
