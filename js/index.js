@@ -209,10 +209,10 @@ function onMenuLoad(r) {
 }
 
 /******************* News 동적 생성 및 슬라이드 ********************/
-var newsNow = 0,  newsSize = 6, newsLast, newsLeft, newsTar;
+var newsNow = 0,  newsSize = 5, newsLast, newsLeft, newsTar;
 var newss = [], newsArr = [];
-$(".news-wrapper > .bt-left").click(onnewsLeft);
-$(".news-wrapper > .bt-right").click(onnewsRight);
+$(".news-wrapper > .bt-left").click(onNewsLeft);
+$(".news-wrapper > .bt-right").click(onNewsRight);
 
 $.get("../json/news.json", onnewsLoad);
 function onnewsLoad(r) {
@@ -254,13 +254,13 @@ function newsInit() {
 	for(var i=0; i<newsArr.length; i++) $(newss[newsArr[i]]).clone().appendTo(".news-wrap");
 }
 
-function onnewsLeft() {
+function onNewsLeft() {
 	newsTar = 0;
 	newsNow = (newsNow == 0) ? newsLast : newsNow - 1;
 	newsAni();
 }
 
-function onnewsRight() {
+function onNewsRight() {
 	newsTar = newsLeft * 2 + "%";
 	newsNow = (newsNow == newsLast) ? 0 : newsNow + 1;
 	newsAni();
@@ -281,11 +281,24 @@ function newsAni() {
 function onResize() {
 	this.wid = $(this).innerWidth();
 	this.hei = $(this).innerHeight();
-	if(wid > 991) prdLeft = -25;
-	else if(wid > 767) prdLeft = -33.3333;
-	else if(wid > 479) prdLeft = -50;
-	else if(wid <= 479) prdLeft = -100;
+	if(wid > 991) {
+		prdLeft = -25;
+		newsLeft = -33.3333;
+	}
+	else if(wid > 767) {
+		prdLeft = -33.3333;
+		newsLeft = -50;
+	}
+	else if(wid > 479) {
+		prdLeft = -50;
+		newsLeft = -100;
+	}
+	else if(wid <= 479) {
+		prdLeft = -100;
+		newsLeft = -100;
+	}
 	$(".prd-wrap").css("left", prdLeft+"%");
+	$(".news-wrap").css("left", newsLeft+"%");
 }
 
 function onScroll() {

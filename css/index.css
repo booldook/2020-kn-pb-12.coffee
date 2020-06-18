@@ -101,8 +101,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .notice-wrap {position: relative;}
 .notice-wrap .news-wrapper {position: relative;}
 .notice-wrap .bt {color: #e7b35a; font-size: 2.5em; cursor: pointer; position: absolute; z-index: 800; top: 50%; transform: translateY(-50%); transition: all 0.5s;}
-.notice-wrap .bt.bt-left {left: -0.75em;}
-.notice-wrap .bt.bt-right {right: -0.75em;}
+.notice-wrap .bt.bt-left {left: -0.25em;}
+.notice-wrap .bt.bt-right {right: -0.25em;}
 .notice-wrap .news-stage {width: 100%; position: relative; /*  overflow: hidden; */ border: 1px solid red;}
 .notice-wrap .news-wrap {width: 166.6666%; position: relative; left: -33.3333%; display: flex;}
 .notice-wrap .news {flex: 18% 0 0; margin: 0 1%; padding: 1.5em; font-size: 1rem; background-color: #eee;}
@@ -152,6 +152,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.loc-wrap .store {width: 70%; margin: 2% auto;}
 	.prd-stage .prd-wrap {width: 166.6666%; left: -33.3333%;}
 	.prd-stage .prd {flex: 20% 0 0;}
+	.news-stage .news-wrap {width: 200%; left: -50%;}
+	.news-stage .news {flex: 23% 0 0;}
 	.menu-wrap .menus {width: 100%; margin-left: 0;}
 	.menu-wrap .menu {flex: 100% 0 0; margin: 0;}
 	.menu-wrap .menu-img {width: 200px;}
@@ -165,6 +167,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.loc-wrap .store {width: 90%; margin: 2% auto;}
 	.prd-stage .prd-wrap {width: 200%; left: -50%;}
 	.prd-stage .prd {flex: 25% 0 0;}
+	.news-stage .news-wrap {width: 300%; left: -100%;}
+	.news-stage .news {flex: 31.3333% 0 0;}
 }
 
 @media screen and (max-width: 479px) {
