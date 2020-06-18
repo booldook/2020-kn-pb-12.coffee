@@ -1,0 +1,9 @@
+{
+	"news": [
+		{"id": 1, "title": "Venenatis efficitur at sit amet lorem", "src": "../img/c-sl-004-768x512.jpg", "cont": "Nunc lacus dui, hendrerit ut ligula vitae, hendrerit aliquet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.", "date": "2020-06-18", "badge": ["Recipes", "News"], "tag": ["Recipes", "By james", "19th January 2020", "1 Comment"]},
+		{"id": 1, "title": "Integer vitae est venenatis nulla from efficitur at sit amet", "src": "../img/c-sl-005-768x512.jpg", "cont": "Maecenas non lacus eget sapien finibus mollis id vel est. Integer vitae neque et lacus libero. Nunc rutrum nisi eget nunc semper, nec aliquam lectus lorem interdum.", "date": "2020-06-18", "badge": ["Recipes", "News"], "tag": ["Recipes", "By james", "19th January 2020", "1 Comment"]},
+		{"id": 1, "title": "Cras pretium metus ac ex dictum faucibus", "src": "../img/c-sl-012-768x512.jpg", "cont": "Morbi consequat, neque tincidunt auctor mattis, libero augue molestie nulla, at dapibus urna libero nec dolor. Aliquam venenatis magna eu libero finibus malesuada.", "date": "2020-06-18", "badge": ["Recipes", "News"], "tag": ["Recipes", "By james", "19th January 2020", "1 Comment"]},
+		{"id": 1, "title": "Lorem – metus ac ex dictum faucibus", "src": "../img/c-sl-0129-768x512.jpg", "cont": "Ut eu elit vel massa malesuada ornare in id magna. Vivamus pellentesque pulvinar porta. Curabitur cursus condimentum ex non aliquam!", "date": "2020-06-18", "badge": ["Recipes", "News"], "tag": ["Recipes", "By james", "19th January 2020", "1 Comment"]},
+		{"id": 1, "title": "Vivamus pellentesque pulvinar porta", "src": "../img/c-sl-004-768x512.jpg", "cont": "Ut eu elit vel massa malesuada ornare in id magna. Vivamus pellentesque pulvinar porta. Curabitur cursus condimentum ex non aliquam!", "date": "2020-06-18", "badge": ["Recipes", "News"], "tag": ["Recipes", "By james", "19th January 2020", "1 Comment"]}
+	]
+}
