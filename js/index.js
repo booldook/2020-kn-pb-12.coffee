@@ -208,6 +208,70 @@ function onMenuLoad(r) {
 	}
 }
 
+/******************* News 동적 생성 및 슬라이드 ********************/
+var newsNow = 0,  newsSize = 6, newsLast, newsLeft, newsTar;
+var newss = [], newsArr = [];
+$(".news-wrapper > .bt-left").click(onnewsLeft);
+$(".news-wrapper > .bt-right").click(onnewsRight);
+
+$.get("../json/news.json", onnewsLoad);
+function onnewsLoad(r) {
+	newsLast = r.news.length - 1;
+	var html = '';
+	for(var i in r.news) {
+		html  = '<li class="news">';
+		html += '<div class="news-img">';
+		html += '<img src="../img/c-sl-004-768x512.jpg" class="img">';
+		html += '<div class="badge-tag">';
+		html += '<div class="badge">Recipes</div>';
+		html += '<div class="badge">News</div>';
+		html += '</div>';
+		html += '<div class="badge-date">';
+		html += '<div class="month">JAN</div>';
+		html += '<div class="day">19</div>';
+		html += '</div>';
+		html += '</div>';
+		html += '<div class="news-title">Venenatis efficitur at sit amet lorem</div>';
+		html += '<div class="news-tag">';
+		html += '<span class="tag">Recipes</span>';
+		html += '<span class="tag">By james</span>';
+		html += '<span class="tag">19th January 2020</span>';
+		html += '<span class="tag">1 Comment</span>';
+		html += '</div>';
+		html += '<div class="news-cont">Nunc lacus dui, hendrerit ut ligula vitae, hendrerit aliquet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</div>';
+		html += '<button class="bt-ghost bt-more">Read more <span>▶</span></button>';
+		html += '</li>';
+		newss.push($(html));		
+	}
+	newsInit();
+}
+
+function newsInit() {
+	newsArr = [];
+	newsArr[1] = newsNow;
+	newsArr[0] = (newsNow == 0) ? newsLast : newsNow - 1;
+	for(var i=2; i<newsSize; i++) newsArr[i] = (newsArr[i-1] == newsLast) ? 0 : newsArr[i-1] + 1;
+	for(var i=0; i<newsArr.length; i++) $(newss[newsArr[i]]).clone().appendTo(".news-wrap");
+}
+
+function onnewsLeft() {
+	newsTar = 0;
+	newsNow = (newsNow == 0) ? newsLast : newsNow - 1;
+	newsAni();
+}
+
+function onnewsRight() {
+	newsTar = newsLeft * 2 + "%";
+	newsNow = (newsNow == newsLast) ? 0 : newsNow + 1;
+	newsAni();
+}
+
+function newsAni() {
+	$(".news-wrap").stop().animate({"left": newsTar}, 500, function(){
+		$(this).empty().css({"left": newsLeft+"%"});
+		newsInit();
+	});
+}
 
 /******************* 사용자 함수 ********************/
 
