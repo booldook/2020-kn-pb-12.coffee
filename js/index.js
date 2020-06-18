@@ -216,29 +216,30 @@ $(".news-wrapper > .bt-right").click(onNewsRight);
 
 $.get("../json/news.json", onnewsLoad);
 function onnewsLoad(r) {
+	console.log(r.news);
 	newsLast = r.news.length - 1;
 	var html = '';
 	for(var i in r.news) {
 		html  = '<li class="news">';
 		html += '<div class="news-img">';
-		html += '<img src="../img/c-sl-004-768x512.jpg" class="img">';
+		html += '<img src="'+r.news[i].src+'" class="img">';
 		html += '<div class="badge-tag">';
-		html += '<div class="badge">Recipes</div>';
-		html += '<div class="badge">News</div>';
+		for(var j in r.news[i].badge) {
+			html += '<div class="badge">'+r.news[i].badge[j]+'</div>';
+		}
 		html += '</div>';
 		html += '<div class="badge-date">';
-		html += '<div class="month">JAN</div>';
-		html += '<div class="day">19</div>';
+		html += '<div class="month">'+moment(r.news[i].date).format('MMM')+'</div>';
+		html += '<div class="day">'+moment(r.news[i].date).format('DD')+'</div>';
 		html += '</div>';
 		html += '</div>';
-		html += '<div class="news-title">Venenatis efficitur at sit amet lorem</div>';
+		html += '<div class="news-title">'+r.news[i].title+'</div>';
 		html += '<div class="news-tag">';
-		html += '<span class="tag">Recipes</span>';
-		html += '<span class="tag">By james</span>';
-		html += '<span class="tag">19th January 2020</span>';
-		html += '<span class="tag">1 Comment</span>';
+		for(var j in r.news[i].tag) {
+			html += '<span class="tag">'+r.news[i].tag[j]+'</span>';
+		}
 		html += '</div>';
-		html += '<div class="news-cont">Nunc lacus dui, hendrerit ut ligula vitae, hendrerit aliquet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</div>';
+		html += '<div class="news-cont">'+r.news[i].cont+'</div>';
 		html += '<button class="bt-ghost bt-more">Read more <span>▶</span></button>';
 		html += '</li>';
 		newss.push($(html));		

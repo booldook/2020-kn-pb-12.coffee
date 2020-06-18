@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .notice-wrap .bt {color: #e7b35a; font-size: 2.5em; cursor: pointer; position: absolute; z-index: 800; top: 50%; transform: translateY(-50%); transition: all 0.5s;}
 .notice-wrap .bt.bt-left {left: -0.25em;}
 .notice-wrap .bt.bt-right {right: -0.25em;}
-.notice-wrap .news-stage {width: 100%; position: relative; /*  overflow: hidden; */ border: 1px solid red;}
+.notice-wrap .news-stage {width: 100%; position: relative;  overflow: hidden;}
 .notice-wrap .news-wrap {width: 166.6666%; position: relative; left: -33.3333%; display: flex;}
 .notice-wrap .news {flex: 18% 0 0; margin: 0 1%; padding: 1.5em; font-size: 1rem; background-color: #eee;}
 .notice-wrap .news-img {position: relative;}
