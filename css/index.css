@@ -9,7 +9,7 @@ font-family: 'Roboto Condensed', sans-serif;
 */
 
 /******************* 공통사항 ********************/
-html, body {height: 5000px; font-family: 'Roboto', sans-serif;}
+html, body {height: 8000px; font-family: 'Roboto', sans-serif;}
 h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
 .pointer {cursor: pointer;}
 .wrapper {max-width: 1200px; margin: auto; padding: 5rem 1%; position: relative;}
@@ -122,8 +122,15 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .notice-wrap button::after {display: block; content: ""; height: 3px; background-color: #e6ac65; transform: translateY(8px); width: 0; transition: all 0.5s;}
 .notice-wrap button:hover::after {width: 100%;}
 
-
-
+/******************* .press-wrap ********************/
+.press-wrap {position: relative; background-image: url(../img/c-sl-011.jpg); background-size: cover;background-position-x: center;}
+.press-wrap::before {display: block; width: 100%; height: 100%; content: ""; background-color: rgba(0,0,0,0.4); position: absolute;}
+.press-wrap .title {font-size: 3rem; color: #fff; text-align: center;}
+.press-wrap .press-ul {display: flex; justify-content: space-between;}
+.press-wrap .press {flex: 23% 0 0; background-color: #f8f8f8; text-align: center; padding: 2.5em 1.5em; font-size: 1rem;}
+.press-wrap .logo {margin-bottom: 2em;}
+.press-wrap .cont {color: #999; line-height: 1.75; margin-bottom: 2em;}
+.press-wrap .writer {color: #333; font-family: 'Roboto Condensed', sans-serif; font-weight: bold; font-size: 1.25em;}
 
 
 
