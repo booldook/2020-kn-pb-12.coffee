@@ -349,8 +349,16 @@ function onScroll() {
 		pressGap = (pressSpeed/2) - Math.round((scTop + hei - pressStart) / (pressEnd - pressStart) * pressSpeed);
 		$(".press-wrap").css("background-position-y", pressGap + "%");
 	}
+
+	// .bt-top show/hide
+	(scTop > hei) ? $(".bt-top").show() : $(".bt-top").hide();
+}
+
+function onTop() {
+	$("html, body").stop().animate({"scrollTop": 0}, 500);
 }
 
 /******************* 이벤트 설정 ********************/
 $(window).resize(onResize).trigger("resize");
 $(window).scroll(onScroll).trigger("scroll");
+$(".bt-top").click(onTop);

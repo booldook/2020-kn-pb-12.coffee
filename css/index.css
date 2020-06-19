@@ -9,7 +9,7 @@ font-family: 'Roboto Condensed', sans-serif;
 */
 
 /******************* 공통사항 ********************/
-html, body {height: 8000px; font-family: 'Roboto', sans-serif;}
+html, body {font-family: 'Roboto', sans-serif;}
 h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
 .pointer {cursor: pointer;}
 .wrapper {max-width: 1200px; margin: auto; padding: 5rem 1%; position: relative;}
@@ -19,6 +19,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .bookmark-bar .fa {margin: 0 1rem;}
 .bookmark-bar::before,
 .bookmark-bar::after {width: 50px; height: 4px; background-color: #e7b35a; display: block; content: "";}
+.bt-top {background-color: rgba(0,0,0,0.3); color: #fff; font-size: 1.25rem; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; position: fixed; right: 40px; bottom: 40px; cursor: pointer; transition: all 0.5s;}
+.bt-top:hover {background-color: rgba(0,0,0,0.7);}
 
 /******************* header ********************/
 .header {width: 100%; display: flex; justify-content: center; align-items: center; background-color: #111; color: #f8f8f8; font-size: 1.25rem; padding: 1rem; position: absolute; bottom: 0; z-index: 999;}
