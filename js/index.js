@@ -332,7 +332,7 @@ function onScroll() {
 	// .page의 현재 page 찾기
 	var nowPage = -10;
 	for(var i = $(".page").length - 1; i>=0; i--) {
-		if(	$(".page").eq(i).offset().top < scTop	) {
+		if(	$(".page").eq(i).offset().top <= scTop	) {
 			nowPage = i;
 			break;
 		}
@@ -389,9 +389,21 @@ function onNaviHide() {
 	});
 }
 
+function onNaviClick() {
+	var tar = $(".page").eq($(this).index()).offset().top + 1;
+	$("html, body").stop().animate({"scrollTop": tar}, 500);
+}
+
+function onLogoClick() {
+	$("html, body").stop().animate({"scrollTop": 0}, 500);
+}
+
 /******************* 이벤트 설정 ********************/
 $(window).resize(onResize).trigger("resize");
 $(window).scroll(onScroll).trigger("scroll");
 $(".bt-top").click(onTop);
 $(".header .navi-bars").click(onNaviShow);
 $(".header .bt-close").click(onNaviHide);
+$(".header > .navi").click(onNaviClick);
+$(".header > .navi-mo .navi").click(onNaviClick);
+$(".header > .logo").click(onLogoClick);
