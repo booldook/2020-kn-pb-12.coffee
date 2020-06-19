@@ -358,7 +358,27 @@ function onTop() {
 	$("html, body").stop().animate({"scrollTop": 0}, 500);
 }
 
+function onNaviShow() {
+	$(".header .bt-close").css("opacity", 1);
+	$(".navi-mo").css("display", "block");
+	setTimeout(function(){
+		// $(".navi-mo").css("back")
+		$(".navi-mo").find(".navi-wing").css("right", 0);
+	}, 0);
+}
+
+function onNaviHide() {
+	$(this).stop().animate({"opacity": 0}, 500, function(){
+		$(".navi-mo").find(".navi-wing").css("right", "-320px");
+		setTimeout(function(){
+			$(".navi-mo").css("display", "none");
+		}, 500);
+	});
+}
+
 /******************* 이벤트 설정 ********************/
 $(window).resize(onResize).trigger("resize");
 $(window).scroll(onScroll).trigger("scroll");
 $(".bt-top").click(onTop);
+$(".header .navi-bars").click(onNaviShow);
+$(".header .bt-close").click(onNaviHide);
