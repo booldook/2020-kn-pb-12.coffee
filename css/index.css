@@ -132,6 +132,15 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .press-wrap .cont {color: #999; line-height: 1.75; margin-bottom: 2em;}
 .press-wrap .writer {color: #333; font-family: 'Roboto Condensed', sans-serif; font-weight: bold; font-size: 1.25em;}
 
+/******************* footer ********************/
+.footer-wrap {background-color: #141414; color: #fff; font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
+.footer-wrap .wrapper {padding: 5rem; text-align: center;}
+.footer-wrap .footer-info {display: flex; margin: 3rem 0;}
+.footer-wrap .info {flex: 33.3333%; padding: 1em; font-size: 1rem;}
+.footer-wrap .footer-sns {display: flex; justify-content: center; margin: 3rem 0;}
+.footer-wrap .sns {width: 30px; height: 30px; background-color: #e7b35a; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 0 0.25em; transition: all 0.5s; cursor: pointer;}
+.footer-wrap .sns:hover {background-color: #fff; color: #e7b35a;}
+.footer-wrap .copyright {color: #eee;}
 
 
 /******************* 지도 모달창 ********************/
