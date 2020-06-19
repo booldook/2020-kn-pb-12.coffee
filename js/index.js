@@ -274,6 +274,22 @@ function newsAni() {
 	});
 }
 
+/******************* press 동적 생성 ********************/
+$.get("../json/press.json", onPressLoad);
+function onPressLoad(r) {
+	var html;
+	for(var i in r.press) {
+		html  = '<li class="press">';
+		html += '	<div class="logo"><img src="'+r.press[i].logo+'"></div>';
+		html += '	<div class="cont">'+r.press[i].content+'</div>';
+		html += '	<div class="writer">'+r.press[i].writer+'</div>';
+		html += '</li>';
+		$(".press-ul").append(html);
+	}
+}
+
+
+
 /******************* 사용자 함수 ********************/
 
 
