@@ -1,0 +1,8 @@
+{
+	"press": [
+		{"id": 1, "logo": "../img/", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinart tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Baker Experts", "writer": "Baker Experts"},
+		{"id": 2, "logo": "../img/", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinart tellus.", "writer": "Lollipops News"},
+		{"id": 3, "logo": "../img/", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinart tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.", "writer": "Cookies News"},
+		{"id": 4, "logo": "../img/", "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinart tellus.", "writer": "Coffee Magazine"}
+	]
+}
