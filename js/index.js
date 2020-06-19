@@ -299,6 +299,7 @@ function onResize() {
 	this.wid = $(this).innerWidth();
 	this.hei = $(this).innerHeight();
 	if(wid > 991) {
+		onNaviHide();
 		prdLeft = -25;
 		newsLeft = -33.3333;
 	}
@@ -327,6 +328,17 @@ function onScroll() {
 	else {
 		$(".header").css({"top": "auto", "bottom": 0, "position": "absolute"});
 	}
+
+	// .page의 현재 page 찾기
+	var nowPage = -10;
+	for(var i = $(".page").length - 1; i>=0; i--) {
+		if(	$(".page").eq(i).offset().top < scTop	) {
+			nowPage = i;
+			break;
+		}
+	}
+	$(".navi-mo").find(".navi").css("color", "#333");
+	$(".navi-mo").find(".navi").eq(nowPage).css("color", "#e6ac65");
 
 	// .loc-wrap의 background-position-y 변화
 	var locStart = $(".loc-wrap").offset().top;
@@ -359,15 +371,16 @@ function onTop() {
 }
 
 function onNaviShow() {
-	$(".header .bt-close").css("opacity", 1);
 	$(".navi-mo").css("display", "block");
 	setTimeout(function(){
-		// $(".navi-mo").css("back")
+		$(".header .bt-close").css("opacity", 1);
+		$(".navi-mo").css("background-color", "rgba(0,0,0,0.8)");
 		$(".navi-mo").find(".navi-wing").css("right", 0);
 	}, 0);
 }
 
 function onNaviHide() {
+	$(".navi-mo").css("background-color", "transparent");
 	$(this).stop().animate({"opacity": 0}, 500, function(){
 		$(".navi-mo").find(".navi-wing").css("right", "-320px");
 		setTimeout(function(){

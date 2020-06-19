@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .header > .navi-bars:hover > .bar:first-child {transform: translateY(3px);}
 .header > .navi-bars:hover > .bar:last-child {transform: translateY(-3px);}
 
-.header > .navi-mo {width: 100%; height: 100vh; background-color: rgba(0,0,0,0.5); position: fixed; left: 0; top: 0; transition: all 0.5s; display: none;}
+.header > .navi-mo {width: 100%; height: 100vh; background-color: transparent; position: fixed; left: 0; top: 0; transition: all 0.5s; display: none;}
 .header > .navi-mo .navi-wing {width: 320px; height: 100%; background-color: #fff; position: absolute; transition: all 0.5s; right: -320px; top: 0; padding: 1rem;}
 .header > .navi-mo .bt-close {text-align: right;}
 .header > .navi-mo .bt-close > .fa {width: 32px; height: 32px; text-align: center; line-height: 32px; background-color: #e6ac65; color: #fff; cursor: pointer;}
