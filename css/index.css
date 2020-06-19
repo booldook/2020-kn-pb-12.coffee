@@ -9,7 +9,7 @@ font-family: 'Roboto Condensed', sans-serif;
 */
 
 /******************* 공통사항 ********************/
-html, body {font-family: 'Roboto', sans-serif;}
+html, body {font-family: 'Roboto', sans-serif; overflow-x: hidden;}
 h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
 .pointer {cursor: pointer;}
 .wrapper {max-width: 1200px; margin: auto; padding: 5rem 1%; position: relative;}
@@ -27,10 +27,17 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .header > .navi, .header > .logo {margin: 0 1rem; cursor: pointer;}
 .header > .navi::after {display: block; content: ""; height: 2px; background-color: #e6ac65; transform: translateY(28px); opacity: 0; transition: all 0.5s;}
 .header > .navi:hover::after {transform: translateY(0); opacity: 1;}
-.header > .navi-mo {width: 24px; height: 19px; display: none; flex-direction: column; justify-content: space-between; cursor: pointer;}
-.header > .navi-mo > .bar {width: 100%; height: 3px; background-color: #f1f1f1; transition: all 0.5s;}
-.header > .navi-mo:hover > .bar:first-child {transform: translateY(3px);}
-.header > .navi-mo:hover > .bar:last-child {transform: translateY(-3px);}
+.header > .navi-bars {width: 24px; height: 19px; display: none; flex-direction: column; justify-content: space-between; cursor: pointer;}
+.header > .navi-bars > .bar {width: 100%; height: 3px; background-color: #f1f1f1; transition: all 0.5s;}
+.header > .navi-bars:hover > .bar:first-child {transform: translateY(3px);}
+.header > .navi-bars:hover > .bar:last-child {transform: translateY(-3px);}
+
+.header > .navi-mo {width: 320px; height: 100vh; padding: 1rem; background-color: #fff; position: fixed; right: -320px; top: 0; transition: all 0.5s;}
+.header > .navi-mo > .bt-close {text-align: right;}
+.header > .navi-mo > .bt-close > .fa {width: 32px; height: 32px; text-align: center; line-height: 32px; background-color: #e6ac65; color: #fff; cursor: pointer;}
+.header > .navi-mo .navi {padding: 1.25rem 0.75rem; color: #333; border-bottom: 1px solid #eee; cursor: pointer;}
+.header > .navi-mo .navi:hover {color: #e6ac65;}
+
 
 /******************* .main-wrap ********************/
 .main-wrap {width: 100%; height: 100vh; position: relative; overflow: hidden;}
@@ -170,7 +177,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.wrapper {padding: 5rem 2%;}
 	.header {justify-content: space-between; padding: 1rem 2rem;}
 	.header > .navi {display: none;}
-	.header > .navi-mo {display: flex;}
+	.header > .navi-bars {display: flex;}
 	.about-wrap {display: block;}
 	.about-wrap > .photos {width: 60%; margin: 0 auto 2rem auto;}
 	.loc-wrap .store-wrap {display: block;}
