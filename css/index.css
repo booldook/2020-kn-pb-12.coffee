@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 .press-wrap {position: relative; background-image: url(../img/c-sl-011.jpg); background-size: cover;background-position-x: center;}
 .press-wrap::before {display: block; width: 100%; height: 100%; content: ""; background-color: rgba(0,0,0,0.4); position: absolute;}
 .press-wrap .title {font-size: 3rem; color: #fff; text-align: center;}
-.press-wrap .press-ul {display: flex; justify-content: space-between;}
+.press-wrap .press-ul {display: flex; justify-content: space-between; flex-wrap: wrap;}
 .press-wrap .press {flex: 23% 0 0; background-color: #f8f8f8; text-align: center; padding: 2.5em 1.5em; font-size: 1rem;}
 .press-wrap .logo {margin-bottom: 2em;}
 .press-wrap .cont {color: #999; line-height: 1.75; margin-bottom: 2em;}
@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 /******************* footer ********************/
 .footer-wrap {background-color: #141414; color: #fff; font-family: 'Roboto Condensed', sans-serif; font-weight: bold;}
 .footer-wrap .wrapper {padding: 5rem; text-align: center;}
-.footer-wrap .footer-info {display: flex; margin: 3rem 0;}
+.footer-wrap .footer-info {display: flex; flex-wrap: wrap; margin: 3rem 0;}
 .footer-wrap .info {flex: 33.3333%; padding: 1em; font-size: 1rem;}
 .footer-wrap .footer-sns {display: flex; justify-content: center; margin: 3rem 0;}
 .footer-wrap .sns {width: 30px; height: 30px; background-color: #e7b35a; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin: 0 0.25em; transition: all 0.5s; cursor: pointer;}
@@ -174,6 +174,7 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.menu-wrap .menu {flex: 100% 0 0; margin: 0;}
 	.menu-wrap .menu-img {width: 200px;}
 	.menu-wrap .menu-title {padding-top: 5rem;}
+	.press-wrap .press {flex: 47% 0 0; margin-bottom: 6%;}
 }
 
 @media screen and (max-width: 767px) {
@@ -185,6 +186,8 @@ h1, h2, h3, h4, h5, .rc, button {font-family: 'Roboto Condensed', sans-serif; fo
 	.prd-stage .prd {flex: 25% 0 0;}
 	.news-stage .news-wrap {width: 300%; left: -100%;}
 	.news-stage .news {flex: 31.3333% 0 0;}
+	.press-wrap .press {flex: 100% 0 0;}
+	.footer-wrap .info {flex: 100%;}
 }
 
 @media screen and (max-width: 479px) {
