@@ -333,10 +333,21 @@ function onScroll() {
 	var locHei = $(".loc-wrap").innerHeight();
 	var locEnd = locStart + locHei + hei;
 	var locGap = 0;
-	var speed = 400;
+	var locSpeed = 400;
 	if(scTop + hei > locStart && scTop + hei < locEnd) {
-		locGap = (speed/2) - Math.round((scTop + hei - locStart) / (locEnd - locStart) * speed);
+		locGap = (locSpeed/2) - Math.round((scTop + hei - locStart) / (locEnd - locStart) * locSpeed);
 		$(".loc-wrap").css("background-position-y", locGap + "%");
+	}
+
+	// .press-wrap의 background-position-y 변화
+	var pressStart = $(".press-wrap").offset().top;
+	var pressHei = $(".press-wrap").innerHeight();
+	var pressEnd = pressStart + pressHei + hei;
+	var pressGap = 0;
+	var pressSpeed = 200;
+	if(scTop + hei > pressStart && scTop + hei < pressEnd) {
+		pressGap = (pressSpeed/2) - Math.round((scTop + hei - pressStart) / (pressEnd - pressStart) * pressSpeed);
+		$(".press-wrap").css("background-position-y", pressGap + "%");
 	}
 }
 
